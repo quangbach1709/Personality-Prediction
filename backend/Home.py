@@ -19,10 +19,11 @@ def PointScale():
     n = data["N"]
     o = data["O"]
     
+
     dataFrame = [[gender, age, o, n, c, a, e]]
     result = pred.Predict(dataFrame)
-    response = {'result': f"{result}"}
-    print(response)
+    response = {
+        'result': f"{result}",
+    }
+
     return response, 200
-
-
