@@ -36,6 +36,7 @@ const Questions = () => {
       N: scoreN,
       O: scoreO
     }
+
     console.log(features);
     fetch('http://127.0.0.1:5000/submit', {
       method: 'POST',
@@ -46,12 +47,15 @@ const Questions = () => {
     })
     .then(response => response.json())
     .then(data => {
-      console.log('Phản hồi từ backend:', data);
+      console.log(data)
     })
     .catch((error) => {
       console.error('Lỗi:', error);
     });
-      
+    
+    return(
+      alert("Bạn thuộc nhóm tính cách " + data)
+    )
   }
 
   return (
