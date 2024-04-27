@@ -38,7 +38,7 @@ def Predict(dataFinal):
 		train_y[i] =str(train_y[i])
 
 	model = linear_model.LogisticRegression(multi_class='multinomial', solver='newton-cg',max_iter =1000)
-	# model = KNeighborsClassifier(n_neighbors=5, metric='manhattan')
+	model = KNeighborsClassifier(n_neighbors=5, metric='manhattan')
 	#model = RandomForestClassifier(n_estimators=1000, min_samples_split = 5, min_samples_leaf = 8, min_impurity_decrease = 0.1)
 	#model = DecisionTreeClassifier(max_leaf_nodes=5)
 	# model = SVC(kernel='linear',C=5)
