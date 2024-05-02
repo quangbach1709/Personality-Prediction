@@ -2,8 +2,12 @@ import pandas as pd
 import numpy as np
 import joblib
 
-def Predict(dataFinal):
-	model = joblib.load('SVC.joblib')
+def Predict(dataFinal, predicMethod = "LG"):
+
+	if predicMethod == "LG":
+		model = joblib.load('LG.joblib')
+	elif predicMethod == "SVC":
+		model = joblib.load('SVC.joblib')
 
 	y_pred = model.predict(dataFinal)
 	np.zeros((1, 7)).ravel()

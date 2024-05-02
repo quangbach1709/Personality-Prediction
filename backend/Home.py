@@ -1,7 +1,7 @@
 from flask import Flask, redirect, url_for, request
-import Predict as pred
 import pandas as pd
 from flask_cors import CORS
+import Predict_joblib as predictor
 
 app = Flask(__name__)
 CORS(app)
@@ -19,9 +19,8 @@ def PointScale():
     n = data["N"]
     o = data["O"]
     
-
     dataFrame = [[gender, age, o, n, c, a, e]]
-    result = pred.Predict(dataFrame)
+    result = predictor.Predict(dataFrame)
     response = {
         'result': f"{result}",
     }
