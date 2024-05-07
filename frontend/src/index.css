@@ -1,9 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #e2ece1;
+}
 
-:root {
+#root {
     font-family: "Poppins", sans-serif;
+    width: 50rem;
+    height: fit-content;
+    background-color: white;
+}
+
+#root .question{
+    margin-left: 3rem;
+}
+
+#root button{
+    width: 5rem;
+    height: 3rem;
+    margin-left: 20rem;
+}
+
+header{
+    text-align: center;
+    background-color: antiquewhite;
+    width: 50rem;
 }

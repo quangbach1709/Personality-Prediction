@@ -66,7 +66,7 @@ const Questions = () => {
 
   return (
 
-    <div>
+    <div class="question">
       <div style={{display: 'flex', alignItems: 'center'}}>
         <p>Giới tính:</p>
         <input onChange={(e) => {setGender(parseInt(e.target.value))}} type="radio" name="gender" id="male" value={1}/>
