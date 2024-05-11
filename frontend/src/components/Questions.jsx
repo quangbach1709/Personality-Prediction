@@ -29,7 +29,7 @@ const Questions = () => {
     const scoreN = Math.round(answerN.reduce((sum, answerEVal) => sum + answerEVal, 0) * 0.16);
     const scoreO = Math.round(answerO.reduce((sum, answerEVal) => sum + answerEVal, 0) * 0.16);
 
-    /*const features = {
+    const features = {
       Gender: gender,
       Age: age,
       E: scoreE,
@@ -37,16 +37,8 @@ const Questions = () => {
       C: scoreC,
       N: scoreN,
       O: scoreO
-    }*/
-    const features = {
-      Gender: 1,
-      Age: 20,
-      E: 4,
-      A: 8,
-      C: 5,
-      N: 4,
-      O: 1
     }
+    
 
     console.log(features);
     fetch('http://127.0.0.1:5000/submit', {
